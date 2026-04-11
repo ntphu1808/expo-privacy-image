@@ -1,6 +1,6 @@
 {
   "name": "expo-privacy-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Overlays a privacy image on the screen when the app goes to the background.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

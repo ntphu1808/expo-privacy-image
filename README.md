@@ -1,6 +1,6 @@
 # expo-privacy-image
 
-A React Native module that overlays a privacy image on the screen whenever the app goes to the background — preventing sensitive content from appearing in the app switcher (iOS) or recent apps (Android).
+A React Native package that overlays a privacy image on the screen whenever the app goes to the background, preventing sensitive content from appearing in the app switcher (iOS) or recent apps (Android).
 
 Built with [Expo Modules](https://docs.expo.dev/modules/overview/).
 
@@ -16,21 +16,20 @@ Built with [Expo Modules](https://docs.expo.dev/modules/overview/).
 
 ## Installation
 
-```sh
-npm install expo-privacy-image
-```
+#### Bare React Native: 
+Ensure [expo-modules](https://docs.expo.dev/bare/installing-expo-modules/) is installed before proceeding, then run the command below.
 
-or
+#### Expo:
 
 ```sh
-yarn add expo-privacy-image
+npx expo install expo-privacy-image
 ```
 
 ---
 
 ## Setup
 
-### Expo managed / bare workflow (with `expo prebuild`)
+### Expo managed
 
 Add the plugin to your `app.config.ts` (or `app.json`) and point it at your privacy image:
 
@@ -55,12 +54,10 @@ npx expo prebuild
 ```
 
 The plugin automatically:
-- **Android** — copies the image to `android/app/src/main/res/drawable/privacy_image.png`
-- **iOS** — adds the image as `PrivacyImage.imageset` inside `Images.xcassets`
+- **Android**: copies the image to `android/app/src/main/res/drawable/privacy_image.png`
+- **iOS**: adds the image as `PrivacyImage.imageset` inside `Images.xcassets`
 
 ### Bare React Native (manual setup)
-
-Ensure [`expo-modules-core`](https://docs.expo.dev/bare/installing-expo-modules/) is installed before proceeding — it is required for autolinking to work.
 
 **Android**
 
@@ -85,7 +82,11 @@ ios/<ProjectName>/Images.xcassets/PrivacyImage.imageset/
 ```json
 {
   "images": [
-    { "idiom": "universal", "filename": "privacy_image.png", "scale": "1x" }
+    { 
+      "idiom": "universal",
+      "filename": "privacy_image.png",
+      "scale": "1x"
+    }
   ],
   "info": { "version": 1, "author": "xcode" }
 }
@@ -101,7 +102,7 @@ npx pod-install
 
 ## Usage
 
-Call `usePrivacyImage()` once — typically at the root of your app or inside a top-level component. Once called, the module is permanently enabled for the lifetime of the app session.
+Call `usePrivacyImage()` once, typically at the root of your app or inside a top-level component. Once called, the module is permanently enabled for the lifetime of the app session.
 
 ```ts
 import { usePrivacyImage } from "expo-privacy-image";
@@ -123,7 +124,7 @@ When the app moves to the background, the image you configured is shown as a ful
 
 ### `usePrivacyImage(): void`
 
-Enables the privacy overlay for the current app session. Safe to call multiple times — subsequent calls are no-ops.
+Enables the privacy overlay for the current app session. Safe to call multiple times, subsequent calls are no-ops.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
