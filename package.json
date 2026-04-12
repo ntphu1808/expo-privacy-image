@@ -1,6 +1,6 @@
 {
   "name": "expo-privacy-image",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Overlays a privacy image on the screen when the app goes to the background.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -17,7 +17,11 @@
     "react-native",
     "expo",
     "expo-privacy-image",
-    "PrivacyImage"
+    "PrivacyImage",
+    "privacy",
+    "background",
+    "recent-apps",
+    "app-switcher"
   ],
   "repository": "https://github.com/ntphu1808/expo-privacy-image",
   "bugs": {

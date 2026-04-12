@@ -12,3 +12,7 @@ __tests__
 /android/src/test/
 /android/build/
 /example/
+
+# Exclude README preview images to keep the published package small
+assets/preview.png
+assets/preview@2x.png

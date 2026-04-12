@@ -4,7 +4,7 @@ A React Native package that overlays a privacy image on the screen whenever the 
 
 Built with [Expo Modules](https://docs.expo.dev/modules/overview/).
 
-<img src="assets/preview.png" width="300" alt="Privacy overlay preview" />
+<img src="https://raw.githubusercontent.com/ntphu1808/expo-privacy-image/main/assets/preview.png" width="400" alt="Privacy overlay preview" />
 
 ---
 
